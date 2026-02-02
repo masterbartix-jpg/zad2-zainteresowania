@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moje zainteresowania</title>
+  <style>
+    html, body {
+      margin: 0;
+      min-width: 1200px;
+      min-height: 100%;
+    }
+    body {
+      background-image: url('tło.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #000;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: auto;
+    }
+    .page-container {
+      width: 1200px;
+      min-height: 1800px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .content-card {
+      width: 900px;
+      height: 2500px;
+      background: linear-gradient(135deg, #63667e 0%, #45475f 25%, #3f4253 50%, #3e4253 75%, #55556b 100%);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 32px 0;
+      box-sizing: border-box;
+    }
+    .title-main {
+      margin: 0;
+      font-size: 40pt;
+      font-weight: 700;
+      font-family: "Agency FB", sans-serif;
+      text-align: center;
+      background: linear-gradient(90deg, #f31111 0%, #cc2626 20%, #f00505 40%, #ad3535 60%, #ce1e1e 80%, #f01818 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .intro-text {
+      margin: 8px 0 0;
+      font-size: 20pt;
+      font-weight: 600;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      background: linear-gradient(90deg, #120000 0%, #2b0505 20%, #3a0909 40%, #1a0000 60%, #3b0b0b 80%, #140000 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .content-body {
+      margin-top: 28px;
+      color: #f2f2f2;
+      font-family: "Arial", sans-serif;
+      font-size: 14pt;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .content-body h2 {
+      margin: 0 0 12px;
+      font-size: 20pt;
+      font-weight: 700;
+      text-align: center;
+    }
+    .h2-orangish {
+      background: linear-gradient(90deg, #ffb347 0%, #ff8c42 50%, #ff6f3c 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .h2-yellowish {
+      background: linear-gradient(90deg, #fff3a3 0%, #ffd54a 50%, #ffb300 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .h2-greenish {
+      background: linear-gradient(90deg, #b9f6ca 0%, #66bb6a 50%, #2e7d32 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .h2-blueish {
+      background: linear-gradient(90deg, #b3e5fc 0%, #64b5f6 50%, #1e88e5 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .h2-pinkish {
+      background: linear-gradient(90deg, #f8bbd0 0%, #f06292 50%, #ec407a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .h2-redish {
+      background: linear-gradient(90deg, #ff9a9a 0%, #ff5252 50%, #d50000 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .h2-purplish {
+      background: linear-gradient(90deg, #e1bee7 0%, #ba68c8 50%, #7b1fa2 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .content-body p {
+      margin: 0 0 14px;
+    }
+     .content-body .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 14px;
+    }
+    .content-body .content-list {
+      margin: 0 0 14px;
+      padding-left: 20px;
+      font-size: 14pt;
+    }
+    .content-body .skills-table td {
+      padding: 6px 8px;
+      border-bottom: 4px solid rgba(242, 242, 242, 0.2);
+    }
+    .content-body .skills-table td:first-child {
+      width: 50%;
+      font-weight: 600;
+    }
+    .content-body .skills-table tr:nth-child(1) td:first-child { color: #ffcc80; }
+    .content-body .skills-table tr:nth-child(2) td:first-child { color: #ffd54f; }
+    .content-body .skills-table tr:nth-child(3) td:first-child { color: #81c784; }
+    .content-body .skills-table tr:nth-child(4) td:first-child { color: #64b5f6; }
+    .content-body .skills-table tr:nth-child(5) td:first-child { color: #f48fb1; }
+    .content-body .skills-table tr:nth-child(6) td:first-child { color: #ff8a80; }
+    .content-body .skills-table tr:nth-child(7) td:first-child { color: #b39ddb; }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+        <div class="content-card">
+      <h1 class="title-main">Informatyka i grafika - moja pasja</h1>
+      <p class="intro-text">Na tej stronie opisuję moje zainteresowania związane z informatyką i grafiką komputerową oraz powody, dla których je rozwijam.</p>
+      <div class="content-body">
+        <h2 class="h2-orangish">Moje zainteresowania</h2>
+        <p>
+          Lubię programowanie i uczę się programowania w wielu językach, ponieważ interesują mnie różne
+          dziedziny informatyki. Chętnie poznaję nowe technologie oraz języki programowania
+          i staram się stale rozwijać swoje umiejętności. Czasami wykonuję także drobne
+          projekty lub zlecenia dla innych osób, na razie w formie bezpłatnej, aby zdobywać
+          doświadczenie.
+        </p>
+        <p>
+          Równocześnie uczę się grafiki komputerowej 2D i 3D, aby uzupełnić swoje umiejętności
+          programistyczne. Dzięki połączeniu programowania i grafiki mogę tworzyć bardziej
+          rozbudowane projekty, a moim celem jest w przyszłości stworzenie własnej gry.
+        </p>
+        <h2 class="h2-yellowish">Co mnie interesuje najbardziej</h2>
+        <p>
+          Najbardziej interesuje mnie programowanie w językach Luau oraz C# (Unity), ponieważ umożliwia mi to
+          tworzenie gier komputerowych. Na razie są to proste projekty, często w wersji early alpha, które
+          pozwalają mi uczyć się podstaw tworzenia gier i rozwijać swoje umiejętności.
+        </p>
+        <p>
+          Oprócz programowania lubię również tworzenie prostych grafik 2D do gier i projektów, takich jak
+          elementy interfejsu użytkownika (UI) oraz tekstury, które uzupełniają stronę wizualną tworzonych przeze
+          mnie projektów.
+        </p>
+        <h2 class="h2-greenish">Nauka i postępy w programowaniu i tworzeniu grafiki</h2>
+        <p>
+          Uwielbiam uczyć się nowych języków programowania, programów oraz poznawać różne dziedziny informatyki.
+          Na bieżąco rozwijam się w kilku obszarach programowania, ponieważ nauka nowych technologii poszerza
+          sposób myślenia i daje coraz więcej możliwości. Pozwala mi to na przykład łączyć różne języki i programy,
+          aby lepiej zoptymalizować dany projekt.
+        </p>
+        <h2 class="h2-blueish">Dziedziny programowania</h2>
+        <ul class="content-list">
+          <li>Programowanie gier 2D i 3D</li>
+          <li>Tworzenie stron internetowych</li>
+          <li>Tworzenie botów na platformę Discord</li>
+          <li>Automatyzacja prostych zadań</li>
+          <li>Projektowanie i obsługa baz danych</li>
+          <li>Optymalizacja kodu i wydajności projektów</li>
+          <li>Eksperymentowanie oraz nauka nowych aplikacji i technologii, w tym podstaw tworzenia sztucznej inteligencji</li>
+        </ul>
+        <p>
+          Często szukam inspiracji w różnych miejscach, nawet w codziennych sytuacjach, takich jak reklamy czy
+          projekty stron internetowych. Dzięki temu mogę udoskonalać swoje projekty oraz rozwijać własne pomysły.
+          Na bieżąco eksperymentuję z różnymi stylami i rozwiązaniami, co pozwala mi zdobywać nowe doświadczenie
+          i poszerzać swoje umiejętności.
+        </p>
+        <h2 class="h2-pinkish">Dziedziny grafiki komputerowej</h2>
+        <ul class="content-list">
+          <li>Tworzenie modeli 3D</li>
+          <li>Projektowanie interfejsów użytkownika (UI)</li>
+          <li>Tworzenie tekstur</li>
+          <li>Rysowanie cyfrowe niezwiązane bezpośrednio z programowaniem</li>
+        </ul>
+        <table class="skills-table">
+          <tbody>
+            <tr><td>Blender</td><td>podstawowy</td></tr>
+            <tr><td>C</td><td>zaawansowany</td></tr>
+            <tr><td>Python</td><td>biegły</td></tr>
+            <tr><td>SQL</td><td>podstawowy</td></tr>
+            <tr><td>Luau</td><td>zaawansowany</td></tr>
+            <tr><td>HTML</td><td>średniozaawansowany</td></tr>
+            <tr><td>Unity</td><td>średniozaawansowany</td></tr>
+          </tbody>
+        </table>
+        <h2 class="h2-redish">Dlaczego pasjonuję się informatyką i grafiką komputerową</h2>
+        <ol class="content-list">
+          <li>
+            Dzięki programowaniu i tworzeniu grafiki mogę tworzyć własny świat oraz
+            realizować swoje pomysły, nawet te najbardziej abstrakcyjne.
+          </li>
+          <li>
+            Poprzez tworzenie programów, stron internetowych lub grafik mogę tworzyć
+            rzeczy praktyczne, które ułatwiają życie, na przykład własne portfolio
+            lub narzędzia do pracy.
+          </li>
+          <li>
+            Informatyka jest dziedziną, która stale się rozwija, ale jednocześnie
+            pozostaje bardzo potrzebna i przyszłościowa, zarówno teraz, jak i w kolejnych latach.
+          </li>
+          <li>
+            Dużą rolę w moim zainteresowaniu informatyką odegrał mój tata, który pracuje
+            jako informatyk i zajmuje się bazami danych. Często pomaga mi w nauce i pokazuje
+            praktyczne zastosowania zdobywanej wiedzy.
+          </li>
+          <li>
+            Dzięki wspólnej pracy nad projektami można poznać wiele ciekawych i inspirujących
+            osób, a współpraca pozwala wymieniać się pomysłami i tworzyć lepsze projekty.
+          </li>
+          <li>
+            Informatyka uczy mnie cierpliwości, logicznego myślenia oraz systematyczności,
+            co pomaga mi również w innych dziedzinach nauki.
+          </li>
+          <li>
+            Dużą satysfakcję sprawia mi moment, gdy projekt zaczyna działać zgodnie z planem
+            i mogę zobaczyć realne efekty swojej pracy.
+          </li>
+        </ol>
+        <h2 class="h2-purplish">Zakończenie</h2>
+        <p>
+          Podsumowując, informatyka i grafika komputerowa są dla mnie nie tylko
+          zainteresowaniem, ale również sposobem na rozwijanie swoich umiejętności
+          i realizowanie własnych pomysłów. Chcę nadal uczyć się nowych technologii,
+          zdobywać doświadczenie oraz tworzyć coraz bardziej rozbudowane projekty,
+          które w przyszłości pozwolą mi realizować większe cele.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
